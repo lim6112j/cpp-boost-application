@@ -1,7 +1,5 @@
-/*
-.DS_Store
-.idea
-*.log
-tmp/
-/**/*build
-/**/.cache
+*
+!*/
+/**/CMakeFiles
+!*.cpp
+!CMakeLists.txt
