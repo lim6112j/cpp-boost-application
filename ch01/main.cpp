@@ -6,11 +6,11 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
   opt::options_description desc("All options");
-  desc.add_options()("apples", opt::value<int>(),
-                     "how many apples do you have")(
-      "oranges", opt::value<int>(), "how many oranges do you have")(
-      "name", opt::value<string>(), "your name")("help",
-                                                 "produce help message");
+  desc.add_options()
+    ("apples, a", opt::value<int>() -> default_value(10), "how many apples do you have")
+    ( "oranges, o", opt::value<int>(), "how many oranges do you have")
+    ( "name", opt::value<string>(), "your name")
+    ("help", "produce help message");
   opt::variables_map vm;
   opt::store(opt::parse_command_line(argc, argv, desc), vm);
   opt::notify(vm);
