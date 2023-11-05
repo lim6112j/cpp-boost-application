@@ -1,6 +1,6 @@
 #include <boost/array.hpp>
 #include <algorithm>
-struct add_1 : public std::__unary_function<char,void> {
+struct add_1 : public std::unary_function<char,void> {
   void operator() (char& c) const {
     ++ c;
   }
