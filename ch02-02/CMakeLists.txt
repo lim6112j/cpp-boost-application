@@ -11,4 +11,4 @@ link_directories(/usr/local/lib)
 #link_directories(/opt/homebrew/Cellar/boost/1.82.0_1/lib)
 link_libraries(boost_program_options)
 # add the executable
-add_executable(string2int main.cpp)
+add_executable(customtypeconversion main.cpp)
